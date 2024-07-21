@@ -1,0 +1,32 @@
+- answer: There are 15086 rows in the devices table. 
+  input: How many rows are there in the devices table?
+  sql_cmd: SELECT count(*) FROM devices;
+  sql_result: '[(15086,)]'
+  table_info: |
+    CREATE TABLE devices
+    (
+        device_name character varying,
+        temperature double precision,
+        humidity double precision,
+        accel_x double precision,
+        accel_y double precision,
+        accel_z double precision,
+        timestamp character varying
+    );
+
+
+- answer: The temperature is 12.25 degrees celcius
+  input: What is the temperature of device named Device1?
+  sql_cmd: SELECT temperature FROM devices WHERE device_name = 'Device1';
+  sql_result: '[(12.25,)]'
+  table_info: |
+    CREATE TABLE devices
+    (
+        device_name character varying,
+        temperature double precision,
+        humidity double precision,
+        accel_x double precision,
+        accel_y double precision,
+        accel_z double precision,
+        timestamp character varying
+    );
