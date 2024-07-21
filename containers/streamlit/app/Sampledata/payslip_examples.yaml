@@ -30,3 +30,51 @@
         accel_z double precision,
         timestamp character varying
     );
+
+- answer: The humidity is 2.25%
+  input: What is the humidity of device named Device1?
+  sql_cmd: SELECT humidity FROM devices WHERE device_name = 'Device1';
+  sql_result: '[(2.25,)]'
+  table_info: |
+    CREATE TABLE devices
+    (
+        device_name character varying,
+        temperature double precision,
+        humidity double precision,
+        accel_x double precision,
+        accel_y double precision,
+        accel_z double precision,
+        timestamp character varying
+    );
+
+- answer: The acceleromter values are X = 2.25, Y = 42.2, Z = -12.2
+  input: What is the acceleromter readings for device named Device1?
+  sql_cmd: SELECT accel_x, accel_y, accel_z FROM devices WHERE device_name = 'Device1';
+  sql_result: '[(2.25, 42.2, -12.2)]'
+  table_info: |
+    CREATE TABLE devices
+    (
+        device_name character varying,
+        temperature double precision,
+        humidity double precision,
+        accel_x double precision,
+        accel_y double precision,
+        accel_z double precision,
+        timestamp character varying
+    );
+
+- answer: The device named Device1 was last update on 2024-07-21 14:30:00.000
+  input: What is the device named Device1 last updated?
+  sql_cmd: SELECT timestamp FROM devices WHERE device_name = 'Device1';
+  sql_result: '[(2024-07-21 14:30:00.000,)]'
+  table_info: |
+    CREATE TABLE devices
+    (
+        device_name character varying,
+        temperature double precision,
+        humidity double precision,
+        accel_x double precision,
+        accel_y double precision,
+        accel_z double precision,
+        timestamp character varying
+    );

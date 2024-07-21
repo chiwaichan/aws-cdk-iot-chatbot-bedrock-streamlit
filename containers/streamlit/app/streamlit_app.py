@@ -7,7 +7,7 @@ from amazon_athena_bedrock_query import athena_answer
 def show_app():
 
     # title of the streamlit app
-    st.title(f""":rainbow[Rockit Payslip Analyzer using Bedrock]""")
+    st.title(f""":rainbow[Query Athena IoT Data using Bedrock]""")
 
     # configuring values for session state
     if "messages" not in st.session_state:
